@@ -5,10 +5,9 @@ import java.util.Map;
 // BEGIN
 public class FileKV implements KeyValueStorage {
     private String path;
-    private HashMap<String, String> storage;
     FileKV(String path, Map<String, String> storage) {
         this.path = path;
-        Utils.writeFile(path, Utils.serialize(storage));
+        Utils.writeFile(path, Utils.serialize(new HashMap<>(storage)));
     }
 
     @Override

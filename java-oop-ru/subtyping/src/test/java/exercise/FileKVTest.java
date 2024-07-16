@@ -36,8 +36,4 @@ class FileKVTest {
         storage.unset("key");
         assertThat(storage.get("key", "default")).isEqualTo("default");
     }
-
-    // BEGIN
-    
-    // END
 }
