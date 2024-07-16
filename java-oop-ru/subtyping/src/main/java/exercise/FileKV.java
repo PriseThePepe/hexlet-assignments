@@ -11,17 +11,19 @@ public class FileKV implements KeyValueStorage {
     }
 
     @Override
-    public void set(String key, String value) {
+    public KeyValueStorage set(String key, String value) {
         Map<String, String> storage = Utils.unserialize(Utils.readFile(path));
         storage.put(key, value);
         Utils.writeFile(path, Utils.serialize(storage));
+        return this;
     }
 
     @Override
-    public void unset(String key) {
+    public KeyValueStorage unset(String key) {
         Map<String, String> storage = Utils.unserialize(Utils.readFile(path));
         storage.remove(key);
         Utils.writeFile(path, Utils.serialize(storage));
+        return this;
     }
 
     @Override

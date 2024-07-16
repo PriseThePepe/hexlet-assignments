@@ -3,8 +3,8 @@ package exercise;
 import java.util.Map;
 
 public interface KeyValueStorage {
-    void set(String key, String value);
-    void unset(String key);
+    KeyValueStorage set(String key, String value);
+    KeyValueStorage unset(String key);
     String get(String key, String defaultValue);
     Map<String, String> toMap();
 }
