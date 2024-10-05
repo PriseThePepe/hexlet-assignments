@@ -1,0 +1,25 @@
+@import exercise.dto.BasePage
+@import exercise.util.NamedRoutes
+@import gg.jte.Content
+@param Content content
+@param BasePage page = null
+
+
+
+
+<!-- BEGIN -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hexlet Javalin Example</title>
+</head>
+<body>
+@if(page != null && page.getFlash() != null)
+    <p>${page.getFlash()}</p>
+@endif
+${content}
+</body>
+</html>
+<!-- END -->
