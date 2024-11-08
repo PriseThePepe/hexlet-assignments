@@ -1,6 +1,5 @@
 package exercise.dto;
 
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
@@ -32,10 +31,6 @@ public class GuestCreateDTO {
     @FutureOrPresent
     private LocalDate cardValidUntil;
 
-    // END
-
-    @CreatedDate
-    private LocalDate createdAt;
 
 }
 // END
